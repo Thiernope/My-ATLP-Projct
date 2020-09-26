@@ -1,0 +1,1136 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    height: 100%;
+}
+
+.copylight p{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 30px
+}
+
+li{
+ list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.top-wraper{
+    width: 100%;
+    background-color: #333;
+    background-attachment: fixed;   
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:rgb(66, 145, 128); 
+    height: 8vh;
+}
+
+.header >ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+    color: black;
+    font-size: 18px;
+    align-items: center;
+    margin-left: auto;
+}
+
+
+.top-grid{
+    height: 60vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.greeting{
+    color: white;
+    margin-left: 25vh;
+}
+.greeting h2{
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.top-button{
+    padding: 10px 5px;
+    background-color:rgb(66, 145, 128); 
+    border:none;
+    outline:none; 
+    width:155px;
+    height: 90px;
+    margin-top:125px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: 35px;
+   
+}
+
+.top-button i{
+    font-size: 50px;
+    width: 100px;
+    height:50px;
+    display: block;
+    cursor: pointer;
+}
+
+.internal-pages{
+    width: 100%;
+    height: 660vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+    "b v v v v v v v v v y y"
+    "b e e e e e e e e e y y"
+    "b a a a a a a a a a y y"
+    "b p p p p p p p p p y y"
+    "b x x x x x x x x x y y"
+    "b f f f f f f f f f y y"
+    ;  
+}
+
+.profile{
+    grid-area: v;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .4s;
+}
+
+.heading h1{
+    margin-top: 50px;
+    color: rgb(66, 145, 128);
+}
+.heading h4{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.heading h3{
+    font-size: 15px;
+}
+
+.heading p{
+    color: rgb(66, 145, 128);
+    
+}
+
+.github-link{
+    color: blue;
+}
+.about-me-banner{
+background-color: rgb(174, 226, 174);
+display: flex;
+justify-content: space-around;
+padding-top:30px; 
+padding-bottom: 50px;
+margin-bottom: 50px;
+}
+
+.blank{
+   
+    grid-area: b;
+}
+.menu{
+    grid-area: y;
+
+}
+.experience{
+grid-area: e;
+margin-top:-50px;
+}
+.experience h3{
+    margin-left:150px; 
+    margin-top: 20px;
+}
+
+.school{
+    display: flex;
+    margin-top:30px; 
+}
+ h5{
+    font-size: 15px;
+}
+.school > div> p{
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+.place{
+    width:50%;   
+    margin-left:150px;   
+    
+}
+
+.course{
+    width:50%;
+    margin-right:150px;  
+}
+
+.abilities{
+   grid-area: a;
+}
+
+.all-skills{
+  display: flex;
+  justify-content:space-around;
+  background-color: rgb(241, 155, 169);  
+  padding-top: 20px;
+}
+
+.skills{
+    width: 40%; 
+}
+
+.skills ul li{
+    margin: 30px 0;
+    position: relative;
+}
+
+.skills ul li:before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 10px);
+    left:0px;
+    height:8px;
+    background-color: rgb(236, 129, 129);
+    border-radius: 1000px;
+
+}
+
+.skills ul li:after{
+    content: "";
+    width: 0;
+    position: absolute;
+    top: calc(100% + 10px);
+    left:0px;
+    height:8px;
+    background-color: green;
+    border-radius: 1000px;
+    animation-duration: .7s;
+    animation-timing-function:ease;
+    animation-fill-mode: forwards;
+}
+
+.skills ul li.html:after{
+    animation-name: html;
+}
+
+@keyframes html{
+    to {
+        width: 90%;
+    }
+}
+.skills ul li.css:after{
+    animation-name: css;
+}
+
+@keyframes css{
+    to {
+        width: 80%;
+    }
+}
+.skills ul li.javascript:after{
+    animation-name: javascript;
+}
+
+@keyframes javascript{
+    to {
+        width: 75%;
+    }
+}
+.skills ul li.flex:after{
+    animation-name: flex;
+}
+
+@keyframes flex{
+    to {
+        width: 80%;
+    }
+}
+.skills ul li.grid:after{
+    animation-name: grid;
+}
+
+@keyframes grid{
+    to {
+        width: 80%;
+    }
+}
+.skills ul li.grid:after{
+    animation-name: grid;
+}
+
+@keyframes grid{
+    to {
+        width: 80%;
+    }
+}
+.skills ul li.node:after{
+    animation-name: node;
+}
+
+@keyframes node{
+    to {
+        width: 70%;
+    }
+}
+.skills ul li.firebase:after{
+    animation-name: firebase;
+}
+
+@keyframes firebase{
+    to {
+        width: 65%;
+    }
+}
+
+.skills ul li.figma:after{
+    animation-name: figma;
+}
+
+@keyframes figma{
+    to {
+        width: 70%;
+    }
+}
+.skills ul li.git:after{
+    animation-name: git;
+}
+
+@keyframes git{
+    to {
+        width: 40%;
+    }
+}
+
+.skills ul li.vscode:after{
+    animation-name: vscode;
+}
+
+@keyframes vscode{
+    to {
+        width: 90%;
+    }
+}
+
+.skills ul li.commandline:after{
+    animation-name: commandline;
+}
+
+@keyframes commandline{
+    to {
+        width: 50%;
+    }
+}
+
+.skills ul li.ms:after{
+    animation-name: ms;
+}
+
+@keyframes ms{
+    to {
+        width: 90%;
+    }
+}
+
+.skills ul li.google:after{
+    animation-name: google;
+}
+
+@keyframes google{
+    to {
+        width: 75%;
+    }
+}
+
+.skills ul li.trello:after{
+    animation-name: trello;
+}
+
+@keyframes trello{
+    to {
+        width: 95%;
+    }
+}
+
+.skills ul li.sql:after{
+    animation-name: sql;
+}
+
+@keyframes sql{
+    to {
+        width: 75%;
+    }
+}
+
+.percentage{
+    margin-left: 90%;
+}
+
+
+.project{
+grid-area: p;
+}
+.imag-gp img{
+ width: 400px;
+ height: 200px;
+ position: relative;
+}
+
+.imag-gp{
+    margin-left: 10px;
+    position: relative;
+}
+
+.description{
+    width: 400px;
+    height:200px;
+    background-color: rgb(66, 145, 128);;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
+}
+
+.description:hover{
+    opacity:1;
+    transition: opacity 1s ease;
+}
+
+.done-pro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.done-pro >div{
+    margin-top:20px;
+    margin-left:20px;
+}
+
+.blog{
+grid-area: x;
+
+}
+.blog-field{
+    background-color: rgb(174, 226, 174);
+}
+
+.blog-field button{
+    cursor:pointer;
+}
+
+
+.footer{
+grid-area: f;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(12, 11, 11);
+    justify-content: space-around;
+    height: 12%;
+    width: 70%;
+    margin: 0 auto;
+    position: sticky;
+    top: 50px;
+}
+
+.menu ul li{
+    display: block;
+    padding-top: 30px;
+    padding-right:30px;
+    padding-left: 30px;
+    padding-bottom: 26px;
+}
+.menu ul li:hover{
+    background-color: rgb(66, 145, 128);
+    
+}
+
+.picture img{
+    border: 20px solid darkgray;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.about{
+    width: 25%;
+}
+.about h1{
+    font-size: 25px;
+}
+.about p{
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.details{
+    text-align: center;
+}
+.details h3{
+    margin-top:10px;
+    font-size: 18px;
+}
+
+.details p{
+    margin-top: 10px;
+    line-height: 25px; 
+}
+.details h1{
+    font-size: 25px;
+}
+
+.details button{
+    margin-top: 20px;
+    background-color: rgb(131, 204, 228);
+    border:none;
+    outline:none;
+    color: blue;
+    font-size:18px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-left: 5px;
+
+}
+.details i{
+    margin-top: 0px;
+
+}
+
+.butt{
+   padding: 10px 20px;
+}
+
+.blog-field{
+    width:100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-field button{
+    display: inline-block;
+    padding: 20px 100px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+
+}
+
+
+.input-fields input{
+    width: 400px;
+    height:50px;
+    padding-left: 10px;
+    color: black;
+    font-size: 18px;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+}
+.contact-fields{
+margin-top:50px;
+display: flex;
+justify-content: space-around;
+background-color: #333;
+padding-top: 50px;
+padding-bottom: 30px;
+}
+
+.input-fields button{
+    width:100px;
+    height:40px;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background-color: darkgray;
+}
+
+.social-media img{
+    width:30px;
+    height:30px;
+}
+
+.social-media >div{
+    margin-top:5px;
+}
+
+textarea{
+    font-size: 18px;
+    color: black;
+    width:400px;
+    height:100px;
+}
+
+
+@media all and (max-width:1024px){
+    .about-me-banner{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align:center;
+        }
+       
+        .about-me-banner >div{
+            width: 70%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .header >ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 40%;
+            color: black;
+            font-size: 18px;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .header > ul li{
+            margin-right: 20px;
+        }
+
+        .top-wraper{
+            width: 100%;
+            height: 46vh;  
+        }
+
+        .top-button{
+
+            margin-top:-283px;
+            display: flex;
+            justify-content: space-around;
+            margin-right: 2px;
+            width:167px;
+           
+        }
+
+        .greeting{
+            color: white;
+            margin-left: 10vh;
+        }
+
+        .menu ul{
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(12, 11, 11);
+            justify-content: space-around;
+            height: 5%;
+            width: 100%;
+            margin: 0 auto;
+            position: sticky;
+            top: 50px;
+        }
+        
+
+        .experience{
+            grid-area: e;
+            margin-top:-650px;
+            }
+       
+.abilities{
+    grid-area: a;
+    margin-top: -600px;
+ }
+
+
+ 
+ .percentage{
+    margin-left: 80%;
+}
+.project{
+    grid-area: p;
+    margin-top: -700px;
+    }
+
+    .blog{
+        grid-area: x;
+        margin-top: -650px;
+        }
+       
+    
+        
+        
+        .footer{
+        grid-area: f;
+        margin-top: -650px;
+        }
+
+        .description{
+            width: 300px;
+            height:150px;
+            line-height: 150px;
+
+        }
+
+        .imag-gp img{
+            width: 300px;
+            height: 150px;
+           
+        }
+      
+}
+
+@media all and (max-width: 768px){
+    
+    .internal-pages{
+        width: 100%;
+        height: 660vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas:
+        "b v v v v v v v v y y y"
+        "b e e e e e e e e y y y"
+        "b a a a a a a a a y y y"
+        "b p p p p p p p p y y y"
+        "b x x x x x x x x y y y"
+        "b f f f f f f f f y y y"
+        ;  
+    }
+ 
+         .top-wraper{
+             width: 100%;
+             height: 60vh;  
+         }
+ 
+         .top-button{
+ 
+             margin-top: -90px;
+             display: flex;
+             justify-content: space-around;
+             margin-right: 2px;
+             width:190px;
+            
+         }
+
+         .description{
+            width: 400px;
+            height:250px;
+            line-height: 250px;
+
+        }
+
+        .imag-gp img{
+            width: 400px;
+            height: 250px;
+           
+        }
+        
+ 
+         .greeting{
+             color: white;
+             margin-left: 10vh;
+         }
+ 
+         .menu ul{
+             display: flex;
+             flex-direction: column;
+             background-color:rgb(12, 11, 11);
+             justify-content: space-around;
+             height: 8%;
+             width: 100%;
+             margin: 0 auto;
+             position: sticky;
+             top: 50px;
+         }
+         
+ 
+         .experience{
+             grid-area: e;
+             margin-top:-650px;
+             }
+        
+ .abilities{
+     grid-area: a;
+     margin-top: -600px;
+  }
+ 
+ 
+  
+  .percentage{
+     margin-left: 80%;
+ }
+ .project{
+     grid-area: p;
+     margin-top: -700px;
+     }
+ 
+     .blog{
+         grid-area: x;
+         margin-top: -650px;
+         }
+        
+     
+         
+         
+         .footer{
+         grid-area: f;
+         margin-top: -650px;
+         }
+
+         .place{
+            width:50%;   
+            margin-left:50px;   
+            
+        }
+        
+        .course{
+            width:50%;
+            margin-right:50px;  
+        }
+        .experience h3{
+            margin-left:50px; 
+        }
+            
+            .all-skills{
+               display: flex;
+               flex-direction: column;
+              }
+              
+              .skills{
+                  width: 100%; 
+                  padding: 20px 30px;
+              }
+
+              .experience{
+                grid-area: e;
+                margin-top:-50px;
+                }
+           
+    .abilities{
+        grid-area: a;
+        margin-top: -5px;
+     }
+     .project{
+        grid-area: p;
+        margin-top: -5px;
+        }
+    
+        .blog{
+            grid-area: x;
+            margin-top: -5px;
+            }
+
+         .contact-fields{
+            margin-top:50px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 50px;
+            }
+
+            .social-media{
+                margin-top: 30px;
+            }
+
+            .footer{
+                grid-area: f;
+                margin-top: 10px;
+                height: 115vh;
+                }
+              
+            
+}
+
+@media all and (max-width:500px){
+
+    .log img{
+        width:50px;
+        height:30px;
+
+    }
+
+    .bars i{
+        margin-right: 10px;
+    }
+  
+   .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:rgb(66, 145, 128); 
+    height: 6vh;
+}
+
+.top-wraper{
+    width: 100%;
+    height:  95vh;
+
+}
+    .top-grid{
+        display: flex;
+        flex-direction: column;
+        padding-top:50px;
+        align-items: center;
+    }
+
+    .details{
+        margin-top: 20px;
+    }
+
+
+    .image-banner img{
+        width: 200px;
+        height:200px;
+        margin: 30px;
+    
+    }
+    .greeting h1{
+        font-size: 25px;
+    }
+
+    .greeting h2{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .heading h4{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .heading h1{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .about{
+        width:100%;
+    }
+    .picture{
+        width:100%;
+    }
+
+    .details{
+        width: 100%;
+    }
+
+    .about h1{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .about p{
+        margin-top: 10px;
+        line-height: 25px;
+    }
+    .picture{
+        margin-top:5px;
+        width: 200px;
+        height:200px;
+    }
+    .picture img{
+    border: 2px solid silver;
+
+    }
+
+    .place{
+        width:50%;   
+        margin-left:2px; 
+        background-color: darkgray;  
+        
+    }
+    
+    .course{
+        width:50%;
+        margin-left:20px;  
+    }
+    .all-skills{
+        display: flex;
+        flex-direction: column;
+       }
+       
+       .skills{
+           width: 100%; 
+           padding: 20px 10px;
+       }
+
+    .header >ul{
+   position: absolute;
+   top: 6vh;
+   right: 0px;
+   height:30vh;
+   display: flex;
+   background-color: blue;
+   flex-direction: column; 
+   align-items: center;
+   width: 50%;
+   opacity: 0.8;
+   font-size: 12px;
+   display:none;
+    }
+
+    .bars i{
+        display:block;
+        margin-left: auto;
+    }
+
+    .bars i:hover.header >ul{
+        display:block;
+    }
+
+    .internal-pages{
+        width: 100%;
+        height: 660vh;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+        "v v v v v v v v v v v v v v v y"
+        "e e e e e e e e e e e e e e e y"
+        "a a a a a a a a a a a a a a a y"
+        "p p p p p p p p p p p p p p p y"
+        "x x x x x x x x x x x x x x x y"
+        "f f f f f f f f f f f f f f f y"
+        ;  
+    }
+
+    .input-fields input{
+        width: 100%;
+        height:50px;
+        padding-left: 10px;
+        color: black;
+        font-size: 18px;
+        border:none;
+        outline: none;
+        border-radius: 10px;
+    }
+
+    textarea{
+        font-size: 18px;
+        color: black;
+        width: 100%;
+        height:100px;
+    }
+
+    .imag-gp img{
+        width: 80%;
+        height: 100px;
+        margin-left:10px;
+       }
+
+     .description{
+        width: 80%;
+        height: 100px;
+        margin-left:10px;
+        line-height: 100px;
+     }
+       .details .butt{
+           width:100px;
+           height:40px;
+       }
+       .menu ul{
+        justify-content: flex-end;
+        height: 4%;
+        width: 100%;
+        margin: 0 auto;
+        position: sticky;
+        top: 50px;
+        height: 7%;
+        width: 100%;
+        font-size: 13px;
+        padding-left:2px;
+        font-weight: 400;
+
+    }
+
+   .school{
+       display: flex;
+       flex-direction: column;
+   }
+
+   .place{
+       width:100%;
+   }
+
+   .course{
+       width: 100%;
+   }
+    .blog-field button{
+        cursor:pointer;
+        width: 150px;
+        height:50px;
+        font-size:18px;
+        color: black;;
+        text-align: center;
+        background: darkgray;   
+        padding: 5px 20px;
+        border-radius:10px;
+    }
+    
+
+    .contact-fields{
+        padding: 10px 5px;
+    }
+
+    .blank{
+        display: none;
+        overflow:hidden;
+    }
+
+    .picture img{
+        width:150px;
+        height:150px;
+        text-align: left;
+    }
+    .percentage{
+        margin-left: 60%;
+    }
+    .top-button{
+ 
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 1px;
+        width:107px;
+       
+    }
+
+    .greeting{
+        color: white;
+        margin-left: 10vh;
+    }
+
+    .header>img{
+        width:150px;
+        height:150px;
+    }
+    .social-media{
+        margin-top:10px;
+    }
+    .social-media >div{
+        margin-top:5px;
+    }
+}

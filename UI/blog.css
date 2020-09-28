@@ -1,0 +1,170 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgray;
+}
+
+.heading h1{
+    text-align:center;
+    margin-top:20px;
+}
+.container{
+    display: flex;
+    margin-top:50px;
+}
+
+.blog-list{
+    background-color: lightgray;
+    padding-bottom: 30px;
+    border-radius:10px; 
+    flex:2;
+    width:30%;
+    border: 1px solid darkgray;
+}
+
+
+.blog-display{
+    background-color: lightgray;
+    padding: 10px 50px;  
+    border-radius:10px; 
+    height:100%;
+    width:70%;
+    border: 1px solid darkgray;
+
+}
+
+
+.blog-list h2{
+    margin-left:50px;
+    margin-top: 20px;
+}
+
+.card{
+    margin-top: 20px;
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+.card-layout{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding:10px 20px;
+}
+
+.summary{
+width:80%;
+text-align: justify;
+}
+
+.updating{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.updating button{
+    width:70px;
+    height:30px;
+}
+
+.create-card p{
+    width:50px;
+    height:50px;
+    margin-top: 20px;
+    background-color: red;
+    font-size:30px;
+    line-height:50px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.create-card p:hover{
+    background-color: rgb(233, 108, 108);
+    font-size: 40px;
+    
+}
+
+
+
+.identification{
+margin-top: 20px;
+margin-bottom:20px;
+    
+}
+
+.full-blog h1{
+    font-size:40px;
+    margin-bottom: 20px;
+}
+.full-blog p{
+    font-size:18px;
+    text-align: justify;
+}
+
+.feedback-section{
+    margin-top: 30px;    
+}
+
+.feedback-section h2{
+    margin-bottom:20px;
+}
+input{
+    width:400px;
+    height:30px;
+    margin-top:10px;
+    font-size:15px;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    padding-left:20px;
+}
+
+textarea{
+    width:400px;
+    height:100px;
+    margin-top:10px;
+    border-radius:5px;
+    border:none;
+    outline:none;
+    padding-left:20px;
+    font-size:18px;
+}
+
+form button{
+    width:100px;
+    height:30px;
+    border-radius:5px;
+    border:none;
+    outline:none;
+    margin-top:10px;
+    color: blue;
+    font-size:18px;
+    cursor:pointer;
+
+}
+
+.received-feedback{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.received-feedback h3{
+   margin-top:20px;
+}
+.received-feedback p{
+    margin-top:5px;
+    font-size: 18px;
+    margin-bottom:10px;
+}
+
+
+
+

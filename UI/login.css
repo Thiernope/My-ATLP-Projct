@@ -16,10 +16,10 @@ body{
 
 .container{
     position: relative;
-    background-color:gold;
+    background-color: lightgray;
     padding: 40px 30px;
     width: 400px;
-    height: 500px;
+    height: 600px;
 }
 
 .header{
@@ -61,7 +61,7 @@ input:focus{
 input:focus ~ label,
 input:valid ~ label{
     transform: translateY(-45px);
-    color: red;
+    color: black;
     font-size: 15px;
 }
 
@@ -132,6 +132,10 @@ visibility: visible;
 .social-account >div > button a{
     text-decoration: none;
     line-height: 40px;
+}
+
+.social-media{
+    margin-top:-60px;
 }
 
 

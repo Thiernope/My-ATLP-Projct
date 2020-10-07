@@ -11,20 +11,19 @@
    <div class="container">
        <h1 class="header">Login Form</h1>
        <div class="input-field">
-           <form action="">
-               <input type="email" required>
+          <div id="error"></div>
+           <form id="form" action="/" method ="GET">
+               <input type="email" id="email" name="email">
                <label for=""> Email</label>
-           </form>
-       </div>
        <div class="input-field">
-        <form action="">
-            <input type="password" class = "input-password" required> <span class="show-password"><i class="far fa-eye"></i></span>
+            <input type="password" id="pasd" name="pasd" class = "input-password"> <span class="show-password"><i class="far fa-eye"></i></span>
             <label for=""> Password</label>
        <div class="button">
+        
                 <div class="inner">
-                    <a href="#"><button>Login</button></a>
+                   <button type="submit">Login</button>
                 </div>
-    </div>
+       </div>
         </form>
     <div class="social-media">
       <p>Or Login with </p>
@@ -36,5 +35,7 @@
    <p class="reset">Forget password? <a href="reset.html">Reset</a></p>
    <p class="signup">Don't you have account? <a href="signup.html">Sign Up</a></p>
     </div>
+
+    <script defer src="login.js"></script>
 </body>
 </html>

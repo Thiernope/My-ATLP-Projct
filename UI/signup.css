@@ -16,10 +16,10 @@ body{
 
 .container{
     position: relative;
-    background-color: violet;
+    background-color: lightgray;
     padding: 40px 30px;
     width: 400px;
-    height: 500px;
+    height: 600px;
 }
 
 .header{
@@ -138,6 +138,17 @@ visibility: visible;
 .reset, .signup{
     font-size: 20px;
     margin-top: 10px;
+}
+
+.social-media{
+    margin-top: -60px;
+}
+
+.alert{
+    background-color: green;
+    padding: 10px;
+    font-size:18px;
+    display:none;
 }
 
 @media all and (max-width: 1024px){

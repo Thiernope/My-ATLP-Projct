@@ -10,19 +10,28 @@
 <body>
    <div class="container">
        <h1 class="header">Register</h1>
+       <div id="error"></div>
+     <div class="alert">Thank you for registering!</div>
        <div class="input-field">
-           <form action="">
-               <input type="email" required>
-               <label for=""> Email</label>
-           </form>
+        <form  id ="register-form" action="/" method="GET">
+            <input type="text"  placeholder="Name" id="name" required>
+            <!--<label for=""> Name</label>-->
+    </div>
+    <div class="input-field">
+       
+            <input type="number"  placeholder ="age" id="age" required>
+            <!--<label for=""> Company</label> -->
+    </div>
+       <div class="input-field">
+               <input type="email" placeholder="Email" id ="email" required>
+               <!--<label for=""> Email</label> -->
        </div>
        <div class="input-field">
-        <form action="">
-            <input type="password" class = "input-password" required> <span class="show-password"><i class="far fa-eye"></i></span>
-            <label for=""> Password</label>
+            <input type="password" id ="pasd" placeholder="Password" class = "input-password" > <span class="show-password"><i class="far fa-eye"></i></span>
+            <!--<label for=""> Password</label>-->
        <div class="button">
                 <div class="inner">
-                    <a href="#"><button>Submit</button></a>
+                  <button type="submit">Submit</button>
                 </div>
     </div>
         </form>
@@ -33,5 +42,10 @@
     <div class="google"><button><a href="#"><i class="fab fa-google"></i>Google</a></button></div>
     </div>
    </div>
+   <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+
+   <script src="signup.js"></script>
 </body>
 </html>

@@ -24,4 +24,6 @@ form.addEventListener("submit", (e)=>{
     e.preventDefault();
     errorElem.innerText = message.join(" / ");
  }
+
+ form.reset();
 });

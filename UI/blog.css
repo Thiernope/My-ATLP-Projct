@@ -29,107 +29,101 @@ background-color: rgb(190, 185, 185);
 font-size:22px;
 }
 
- h1{
-    display: flex;
-    justify-content: center;
-    margin-top:20px;
-}
-.container{
-    display: flex;
-    margin-top:50px;
 
+.top-heading{
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.header{
+    background-color: lightblue;
+    height: 12vh;
+    top: 0px;
+    left:0px;
+    z-index: 1000;
 }
 
-.blog-list{
+.accordion-item{
     background-color: lightgray;
-    padding-bottom: 30px;
     border-radius:10px; 
-    flex:2;
-    width:30%;
-    border: 1px solid darkgray;
-    height: 100%;
-}
-
-
-.blog-display{
-    background-color: lightgray;
-    padding: 10px 50px;  
-    border-radius:10px; 
-    width:70%;
+    width:80%;
     border: 1px solid darkgray;
     height: 100%;
     padding-bottom: 50px;
+    margin:20px auto;
 }
 
-
-.blog-list h2{
-    margin-left:50px;
-    margin-top: 20px;
+li>div{
+    margin-top:20px;
 }
 
-.card{
-    margin-top: 20px;
-    background-color: darkgray;
-    border-radius: 10px;
-}
-
-.card-layout{
-    display: grid;
-    grid-template-columns: 80% 20%;
-    padding:10px 20px;
-}
-
-.summary{
-width:80%;
-text-align: justify;
-}
-
-.updating{
-    width:20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.updating button{
-    width:70px;
-    height:30px;
-}
-
-.create-card p{
-    width:50px;
-    height:50px;
-    margin-top: 20px;
-    background-color: red;
-    font-size:30px;
-    line-height:50px;
-    border-radius: 50%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-.create-card p:hover{
-    background-color: rgb(233, 108, 108);
-    font-size: 40px;
+.acordion-item-title{
+    margin-left: 300px;
+    font-size:25px;
     
 }
 
+.acordion-item-body{
+    max-height: 0px;
+    overflow:hidden;
+    transition: transform 0.2s ease-in-out;
+}
 
+/*.acordion-item-content{
+    padding-top: 10px;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right,transparent,rgb(12, 74, 85), transparent) 1;
+    padding-bottom:10px;   
+}
+*/
+/*.acordion-item-title.active + .acordion-item-body{
+    display:block;
+}
+*/
+span{
+    color:rgb(12, 74, 85);
+}
+
+
+.acordion-item-title::after{
+    /*content:"002B"; */
+    content:"\25BE";
+    font-size: 2rem;
+    position: absolute;
+    right: 15rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.acordion-item-title.active::after{
+    /*content:"\2212" */
+    transform: rotate(180deg);
+}
+
+.comment-form{
+    text-align: center;
+
+}
+
+
+
+.received-feedback{
+    text-align: center;
+}
 
 .identification{
-margin-top: 20px;
-margin-bottom:20px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.full-blog h1{
-    font-size:40px;
-    margin-bottom: 20px;
+.image{
+   margin-left: 500px;
 }
-.full-blog p{
-    font-size:18px;
+
+.content{
+    width: 80%;
     text-align: justify;
+    margin:  50px auto;
 }
 
 .feedback-section{
@@ -248,10 +242,11 @@ css for signup-modal
     margin: 20px auto;
 }
 
-.header{
+.form-header{
     font-size: 30px;
     margin-bottom: 20px;
     margin-top:10px;
+    text-align: center;
 }
 
 .input-field, form, .button{
@@ -429,9 +424,11 @@ visibility: visible;
 
 }
 
-.header{
+.form-header{
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top:10px;
+    text-align: center;
 }
 
 .input-field, form, .button{
@@ -565,58 +562,75 @@ visibility: visible;
 }
 
 @media all and (max-width: 720px){
-    body{
-       height: 100vh;
-       
-    }
+   
 }
    
 
 
 
-
-
 @media all and (max-width: 1024px){
-  body{
-     height: 50vh;
-     
-  }
 
-  .container{
-      margin-left: 10px;
-      margin-top: 100px;
-  }
   
 }
 
 @media all and (max-width: 720px){
-    body{
-       height: 100vh;
-       
-    }
+   
 }
    
 
 
-@media all and (max-width: 1024px){
-  body{
-     height: 50vh;
-     
-  }
+@media all and (max-width: 500px){
+    .comment-form>input{
+        width: 80%;
+    }
 
-  .container{
-      margin-left: 10px;
-      margin-top: 100px;
-  }
+    textarea{
+        width: 80%;
+    }
+
+    .header h1{
+        font-size: 25px;
+    }
   
-}
 
-@media all and (max-width: 720px){
-    body{
-       height: 100vh;
-       
+    .acordion-item-title{
+        margin-left: 5px;
+        font-size:18px;
+        
+    }
+
+    .acordion-item-title::after{
+        /*content:"002B"; */
+        content:"\25BE";
+        font-size: 1rem;
+        position: absolute;
+        right: 10px;
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .acordion-item-title.active::after{
+        /*content:"\2212" */
+        transform: rotate(180deg);
+    }
+
+    .accordion-item{
+        background-color: lightgray;
+        border-radius:10px; 
+        width:70%;
+        border: 1px solid darkgray;
+        height: 100%;
+        padding-bottom: 50px;
+        margin:20px auto;
+    }
+    
+    .top-heading{
+        font-size: 25px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 }
+
+
 
 
 

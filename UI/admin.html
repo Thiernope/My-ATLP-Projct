@@ -8,66 +8,94 @@
 
 </head>
 <body>
+ 
+   <div class="blogs">
+   <h1>Manage Blogs</h1>
+   <form action="" id="create-form">
+     <label for="title">Title</label>
+     <input type="text" id="title" required>
+     <label>Author</label>
+    <input type="text" id="author" required>
+    <label for="date">Date</label>
+    <input type="date" id="date" required>
+     <label for="content">Content</label>
+     <textarea name="content" id="" cols="30" rows="10"></textarea id="content">
+    <button type="submit">Submit</button>
+   </form>
 
-    <div  class="title">
-        <h1>Blog lists</h1>
-    </div>
-    <div class="container">
+   <ul class="posts">
+  
+   </ul>
+   </div>
+   <div class="queries">
+     <h1>People who contacted me</h1>
+    <ul>
+      <li>
+        <div class="first-name">First name: <span>Jean Marrie</span></div>
+        <div class="last-name">Last name: <span>Ndayambaje</span></div>
+        <div class="email">Email: <span>Jean@gmail.com</span></div>
+        <div class="message">Hello bro, I am interested in you bro. Hope we do a project together</div>
+      </li>
 
-     <div class="card">
-         <div class="info">
-         <p>Author: Thierry Ntirandekura</p>
-         <p>Date: Sep 25, 2020</p>
-         <h3>Flies on a cake</h3>
-         <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nemo.</P>
-        </div>
-        <div class="buttons">
-          <button>Edit</button>
-          <button>Delete</button>
-        </div>
-     </div>
-     <div class="card">
-        <div class="info">
-            <p>Author: Thierry Ntirandekura</p>
-            <p>Date: Sep 25, 2020</p>
-            <h3>Flies on a cake</h3>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nemo.</P>
-           </div>
-           <div class="buttons">
-             <button>Edit</button>
-             <button>Delete</button>
-           </div>
-    </div>
-    <div class="card">
-        <div class="info">
-            <p>Author: Thierry Ntirandekura</p>
-            <p>Date: Sep 25, 2020</p>
-            <h3>Flies on a cake</h3>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nemo.</P>
-           </div>
-           <div class="buttons">
-             <button>Edit</button>
-             <button>Delete</button>
-           </div>
-    </div>
-     <div class="new">
-         <button>Create</button>
-     </div>
+      <li>
+        <div class="first-name">First name: <span>Kamali</span></div>
+        <div class="last-name">Last name: <span>Raphael</span></div>
+        <div class="email">Email: <span>kam@gmail.com</span></div>
+        <div class="message">Hello bro, I am interested in you bro. Hope we do a project together</div>
+      </li>
 
-     <div class="messages">
-       <h1>Received messages</h1>
-       <h2>ntirandth@gmail.com</h2>
-       <p>Hey Thierry, I really impressed with your skills. I want to work with you on the project we have been doing.</p>
-       <hr>
+      <li>
+        <div class="first-name">First name: <span>Madddudu</span></div>
+        <div class="last-name">Last name: <span>Kabura</span></div>
+        <div class="email">Email: <span>kab@gmail.com</span></div>
+        <div class="message">Hello bro, I am interested in you bro. Hope we do a project together</div>
+      </li>
+    
+    </ul>
+   </div>
+   <div class="blog-comments">
+     <ul>
+       <li>
+         <div class="name">Jado</div>
+         <div>Hello the blog was so interesting bro</div>
+       </li>
+     </ul>
+   </div>
+   <div class="users">
+     <ul>
+       <li>
+         <div class="email"></div>
+         <div clas="passoword"></div>
+       </li>
+     </ul>
+   </div>
 
-       <h2>mune0012@gmail.com</h2>
-       <p>Hey Thierry, I really impressed with your skills. I want to work with you on the project we have been doing.</p>
-       <hr>
 
-       <h2>ntda78@gmail.com</h2>
-       <p>Hey Thierry, I really impressed with your skills. I want to work with you on the project we have been doing.</p>
-       <hr>
-     </div>
-    </div>
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDrjt7IdMLVhYkQ8yUcZZvmI6lLqSeudes",
+    authDomain: "atlp-cap-project.firebaseapp.com",
+    databaseURL: "https://atlp-cap-project.firebaseio.com",
+    projectId: "atlp-cap-project",
+    storageBucket: "atlp-cap-project.appspot.com",
+    messagingSenderId: "302436152626",
+    appId: "1:302436152626:web:becee894f49569b6be532b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const auth = firebase.auth();
+</script>
+    <script src="scripts/admin.js"></script>
+    <script src="scripts/authadm.js"></script>
 </body>
 </html>

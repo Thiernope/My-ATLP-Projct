@@ -80,10 +80,14 @@ errorMessage.innerText = messages.join("/");
 
 setTimeout(function(){
     errorMessage.style.display = "none";
-},2000);
+},3000);
 }
 
 form.reset();
+
+
+const signupModal = document.querySelector(".signup-mod-container");
+
 });
 
 
@@ -112,7 +116,7 @@ loginError.innerText = alert.join("/");
 
 setTimeout(function(){
     loginError.style.display = "none";
-},2000);
+},3000);
 
 loging.reset();
 });
@@ -139,3 +143,39 @@ accordionTitles.forEach(accordionTitle=>{
         }
     });
 });
+
+
+const blogList = document.querySelector(".blog-display");
+
+const setUpBlogs = (data)=>{
+
+    let html = "";
+    data.forEach(doc =>{
+        const blog = doc.data();
+        console.log(blog);
+        const li = `
+        <li>
+        <div class="acordion-item-title">Title: <span>${blog.title}</span></div>
+        <div class="acordion-item-body">
+         <div class="accordion-item-content">
+       <div class="identification">
+        <div class="data-published">Date published: <span>${blog.date}</span></div>
+        <div class="author">Author: <span>${blog.author}</span></div>
+       </div>  
+
+       <input type="file" class="image">
+        <div class="content">
+            <p>${blog.content}</p>
+
+        </div>
+      </div>
+      </div> 
+        </li>   
+        `;
+
+        html+=li;
+    });
+
+    blogList.innerHTML = html;
+}
+

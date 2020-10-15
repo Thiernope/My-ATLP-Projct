@@ -3,7 +3,10 @@
     margin:0px;
     box-sizing: border-box;
 }
-
+a{
+    color: black;
+    text-decoration: none;
+}
 body{
     background-color: lightgray;
 }
@@ -60,7 +63,6 @@ li>div{
 .acordion-item-title{
     margin-left: 300px;
     font-size:25px;
-    
 }
 
 .acordion-item-body{
@@ -227,7 +229,6 @@ css for signup-modal
 }
 
 
-
 .signupClose:hover, .signupClose:focus{
     font-size: 22px;
     color: black;
@@ -238,14 +239,16 @@ css for signup-modal
     background-color: lightgray;
     padding: 40px 30px;
     width: 400px;
-    height: 650px;
+    height: 690px;
     margin: 20px auto;
+    margin-top:5px;
+    margin-bottom:10px;
 }
 
 .form-header{
     font-size: 30px;
     margin-bottom: 20px;
-    margin-top:10px;
+    margin-top:-10px;
     text-align: center;
 }
 

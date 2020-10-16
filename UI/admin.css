@@ -50,11 +50,9 @@ form{
 
 .queries{
   background-color: lightblue;
+  padding-top:50px;
 }
 
-.blog-comments{
-  background-color: lightslategray
-}
 
 ul{
   display: flex;
@@ -65,6 +63,7 @@ ul{
 ul li{
   list-style:none;
   margin-top: 20px;
+  
 }
 
 .posts-manage{
@@ -77,4 +76,14 @@ ul li{
   background-color: red;
   padding: 3px 10px;
   cursor:pointer;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
 }

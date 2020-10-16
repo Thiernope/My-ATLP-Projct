@@ -59,4 +59,36 @@ console.log("It works");
 
 
 
+const queries = document.getElementById("info");
+const setQueries = (data)=>{
+    let text =`
+    <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Message</th>
+      </tr> `;
+    
+    data.forEach(doc =>{
+        const query= doc.data();
+      let li =`
+          <tr>
+            <td>${query.firstName}</td>
+            <td>${query.lastName}</td>
+            <td>${query.email}</td>
+            <td>${query.message}</td>
+          </tr> `;
+
+        text+=li;
+    });
+    
+  queries.innerHTML = text;
+
+    }
+
+
+    db.collection("queries").onSnapshot(snapshot =>{
+        setQueries(snapshot.docs);
+         });
+
 

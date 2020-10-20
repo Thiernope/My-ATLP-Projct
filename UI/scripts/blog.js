@@ -122,12 +122,6 @@ loging.reset();
 });
 
 
-
-
- 
-
-
-
 //make blog post collabsable
 
 const accordionTitles = document.querySelectorAll(".acordion-item-title");

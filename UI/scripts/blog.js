@@ -139,37 +139,38 @@ accordionTitles.forEach(accordionTitle=>{
 });
 
 
-const blogList = document.querySelector(".blog-display");
+//fetching blogs from heroku
+const blogsLists = document.querySelector(".blog-display");
+const url = "https://desolate-ridge-00597.herokuapp.com/api/blogs";
+let output = "";
+//user get method to read blogs
 
-const setUpBlogs = (data)=>{
-
-    let html = "";
-    data.forEach(doc =>{
-        const blog = doc.data();
-        console.log(blog);
-        const li = `
-        <li>
-        <div class="acordion-item-title">Title: <span>${blog.title}</span></div>
-        <div class="acordion-item-body">
-         <div class="accordion-item-content">
-       <div class="identification">
-        <div class="data-published">Date published: <span>${blog.date}</span></div>
-        <div class="author">Author: <span>${blog.author}</span></div>
-       </div>  
-
-       <input type="file" class="image">
-        <div class="content">
-            <p>${blog.content}</p>
-
-        </div>
+fetch(url)
+.then(res =>res.json())
+.then((data) =>{
+   data.forEach(blog=>{
+      output += `
+      
+      <li>
+      <div class="acordion-item-title">Title: <span>${blog.title}<</span></div>
+      <div class="acordion-item-body">
+       <div class="accordion-item-content">
+     <div class="identification">
+      <div class="data-published">Date published: <span>${blog.date}</span></div>
+      <div class="author">Author: <span>${blog.author}</span></div>
+     </div>  
+  
+     <input type="file" class="image">
+      <div class="content">
+          <P>${blog.content}</p>
+  
       </div>
-      </div> 
-        </li>   
-        `;
+    </div>
+    </div> 
+      </li>  
 
-        html+=li;
-    });
+      `;
+   })
 
-    blogList.innerHTML = html;
-}
-
+   blogsLists.innerHTML = output
+})

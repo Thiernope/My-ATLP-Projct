@@ -31,7 +31,9 @@ const renderPosts = (blogs)=>{
 
 fetch(url)
 .then(res=>res.json())
-.then((data)=>renderPosts(data)); 
+.then((data)=>renderPosts(data));
+
+
 
 
 //add an article

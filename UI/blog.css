@@ -1,642 +1,85 @@
 *{
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
-a{
-    color: black;
-    text-decoration: none;
-}
-body{
-    background-color: lightgray;
-}
 
-.heading ul{
-    display:flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-ul li{
-    list-style: none;
-    font-size: 20px;
-    background-color: gray;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor:pointer;
-    user-select: none;
-}
-
-ul li:hover, ul li:focus{
-background-color: rgb(190, 185, 185);
-font-size:22px;
-}
-
-
-.top-heading{
-    font-size: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.header{
+.side-bar-menu{
     background-color: lightblue;
-    height: 12vh;
-    top: 0px;
-    left:0px;
-    z-index: 1000;
+    height: 100vh;
+    position: sticky;
+    top:0px;
+    overflow: scroll;
 }
 
-.accordion-item{
-    background-color: lightgray;
-    border-radius:10px; 
-    width:80%;
-    border: 1px solid darkgray;
-    height: 100%;
-    padding-bottom: 50px;
-    margin:20px auto;
-}
-
-li>div{
-    margin-top:20px;
-}
-
-.acordion-item-title{
-    margin-left: 300px;
-    font-size:25px;
-}
-
-.acordion-item-body{
-    max-height: 0px;
-    overflow:hidden;
-    transition: transform 0.2s ease-in-out;
-}
-
-/*.acordion-item-content{
-    padding-top: 10px;
-    border-top: 3px solid;
-    border-image: linear-gradient(to right,transparent,rgb(12, 74, 85), transparent) 1;
-    padding-bottom:10px;   
-}
-*/
-/*.acordion-item-title.active + .acordion-item-body{
-    display:block;
-}
-*/
-span{
-    color:rgb(12, 74, 85);
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
 
-.acordion-item-title::after{
-    /*content:"002B"; */
-    content:"\25BE";
-    font-size: 2rem;
-    position: absolute;
-    right: 15rem;
-    transition: transform 0.2s ease-in-out;
-}
-
-.acordion-item-title.active::after{
-    /*content:"\2212" */
-    transform: rotate(180deg);
-}
-
-.comment-form{
+.title-content{
+    margin: 50px 100px;
     text-align: center;
-
+    font-size: 40px;
 }
 
-
-
-.received-feedback{
-    text-align: center;
-}
-
-.identification{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.image{
-   margin-left: 500px;
-}
-
-.content{
-    width: 80%;
+.blog-content{
+    margin: 50px 100px;
     text-align: justify;
-    margin:  50px auto;
+    font-size: 18px;
+    
 }
 
-.feedback-section{
-    margin-top: 30px;    
+.author-content, .date-content{
+    font-size: 20px;
+    padding-left: 20px;
 }
 
-.feedback-section h2{
-    margin-bottom:20px;
+span{
+    color: red;
 }
+
+.menu{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+li{
+    list-style: decimal;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+h1,h2{
+    margin-left: 15px;
+}
+h1{
+    color: rgb(43, 43, 173);
+}
+
+.blog-list > li{
+    list-style: none;
+}
+
+.comments{
+    text-align: center;
+}
+
 input{
-    width:400px;
-    height:30px;
-    margin-top:10px;
-    font-size:15px;
-    border:none;
-    outline:none;
-    border-radius:5px;
-    padding-left:20px;
+    width: 400px;
+    height:40px;
+    padding-left: 20px;
+    font-size: 15px;
 }
 
 textarea{
     width:400px;
-    height:100px;
-    margin-top:10px;
-    border-radius:5px;
-    border:none;
-    outline:none;
-    padding-left:20px;
-    font-size:18px;
+    height: 100px;
 }
 
-form button{
-    width:100px;
-    height:30px;
-    border-radius:5px;
-    border:none;
-    outline:none;
-    margin-top:10px;
-    color: blue;
-    font-size:18px;
-    cursor:pointer;
-
+.gotten-commnts{
+    margin-top: 50px;
+    margin-left: 50px;
 }
-
-.received-feedback{
-    display: flex;
-    flex-direction: column;
-    margin-top: 300px;
-    height: 100%;
-
-}
-
-.received-feedback h3{
-   margin-top:20px;
-}
-.received-feedback p{
-    margin-top:5px;
-    font-size: 18px;
-    margin-bottom:10px;
-}
-
-
-
-
-/*
-css for signup-modal
-
-*/
-
-.signup-mod-container{
-    position: fixed;
-    top:0px;
-    left:0px;
-    width: 100%;
-    height:100%;
-    background-color: rgb(63, 57, 57);
-    display:none;
-}
-
-.signup-mod-container.show{
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn{
-    0%{
-    opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-
-
-.signupClose{
-    font-size: 20px;
-    margin-left: 300px;
-    color: gray;
-    cursor: pointer;
-    user-select: none;
-}
-
-
-.signupClose:hover, .signupClose:focus{
-    font-size: 22px;
-    color: black;
-
-}
-.signup-modal{
-    position: relative;
-    background-color: lightgray;
-    padding: 40px 30px;
-    width: 400px;
-    height: 690px;
-    margin: 20px auto;
-    margin-top:5px;
-    margin-bottom:10px;
-}
-
-.form-header{
-    font-size: 30px;
-    margin-bottom: 20px;
-    margin-top:-10px;
-    text-align: center;
-}
-
-.input-field, form, .button{
-    position: relative;
-    margin: 25px 0px;
-    width: 100%;
-    height: 50px;
-}
-
-.input-field input{
-    width:100%;
-    height: 100%;
-    border: 1px solid silver;
-    padding-left: 15px;
-    outline: none;
-    font-size: 19px;
-    transition: .4s;
-}
-
-input:focus{
-    border: 1px solid blue;
-}
-.input-field label, span.show-password{
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: green;
-    font-size: 20px;
-    transition: .4s;
-}
-
-input:focus ~ label,
-input:valid ~ label{
-    transform: translateY(-45px);
-    color: red;
-    font-size: 15px;
-}
-
-form .button{
-    margin-top:30px;
-}
-
-.button .inner{
-    background-color: lightblue;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
-}
-
-.inner button{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-span.show-password{
-    margin-left: 80%;
-    font-size:20px; 
-    user-select: none;
-    visibility: hidden;
-}
-
-input:valid ~ span.show-password{
-visibility: visible;
-}
-
-
-.social-media p{
-    margin-top: 100px;
-    font-size: 20px;
-}
-
-.social-account{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.social-account >div > button{
-    width: 100px;
-    height: 40px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.social-account >div > button i{
-    font-size: 25px;
-
-}
-
-.fa-facebook{
-    color: #1877f2;
-}
-
-.fa-google{
-    color: #bd081c;
-}
-
-.social-account >div > button a{
-    text-decoration: none;
-    line-height: 40px;
-}
-
-
-.reset, .signup{
-    font-size: 20px;
-    margin-top: 5px;
-}
-
-.social-media{
-    margin-top: -60px;
-}
-
-.alert{
-    background-color: green;
-    padding: 10px;
-    font-size:18px;
-    display:none;
-}
-
-/*login css */
-
-.login-modal-container{
-    position: fixed;
-    top:0px;
-    left:0px;
-    width: 100%;
-    height:100%;
-    background-color: rgb(63, 57, 57);
-    display:none;
-}
-
-.login-modal-container.show{
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn{
-    0%{
-    opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-
-.login-modal{
-    position: relative;
-    background-color: lightgray;
-    padding: 40px 30px;
-    width: 400px;
-    height: 600px;
-    margin: 20px auto;
-}
-
-.loginClose{
-    font-size: 20px;
-    margin-left: 300px;
-    color: gray;
-    cursor: pointer;
-    user-select: none;
-}
-
-
-
-.loginClose:hover, .signupClose:focus{
-    font-size: 22px;
-    color: black;
-
-}
-
-.form-header{
-    font-size: 30px;
-    margin-bottom: 20px;
-    margin-top:10px;
-    text-align: center;
-}
-
-.input-field, form, .button{
-    position: relative;
-    margin: 25px 0px;
-    width: 100%;
-    height: 50px;
-}
-
-.input-field input{
-    width:100%;
-    height: 100%;
-    border: 1px solid silver;
-    padding-left: 15px;
-    outline: none;
-    font-size: 19px;
-    transition: .4s;
-}
-
-input:focus{
-    border: 1px solid blue;
-}
-.input-field label, span.show-password{
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: green;
-    font-size: 20px;
-    transition: .4s;
-}
-
-input:focus ~ label,
-input:valid ~ label{
-    transform: translateY(-45px);
-    color: black;
-    font-size: 15px;
-}
-
-form .button{
-    margin-top:30px;
-}
-
-.button .inner{
-    background-color: lightblue;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
-}
-
-.inner button{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-span.show-password{
-    margin-left: 80%;
-    font-size:20px; 
-    user-select: none;
-    visibility: hidden;
-}
-
-input:valid ~ span.show-password{
-visibility: visible;
-}
-
-
-.social-media p{
-    margin-top: 100px;
-    font-size: 20px;
-}
-
-.social-account{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.social-account >div > button{
-    width: 100px;
-    height: 40px;
-    background-color: white;
-    cursor: pointer;
-}
-
-.social-account >div > button i{
-    font-size: 25px;
-
-}
-
-.fa-facebook{
-    color: #1877f2;
-}
-
-.fa-google{
-    color: #bd081c;
-}
-
-.social-account >div > button a{
-    text-decoration: none;
-    line-height: 40px;
-}
-
-.social-media{
-    margin-top:-60px;
-}
-
-
-.reset, .signup{
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-@media all and (max-width: 1024px){
-  body{
-     height: 50vh;
-     
-  }
-
-  .container{
-      margin-left: 10px;
-      margin-top: 100px;
-  }
-  
-}
-
-@media all and (max-width: 720px){
-   
-}
-   
-
-
-
-@media all and (max-width: 1024px){
-
-  
-}
-
-@media all and (max-width: 720px){
-   
-}
-   
-
-
-@media all and (max-width: 500px){
-    .comment-form>input{
-        width: 80%;
-    }
-
-    textarea{
-        width: 80%;
-    }
-
-    .header h1{
-        font-size: 25px;
-    }
-  
-
-    .acordion-item-title{
-        margin-left: 5px;
-        font-size:18px;
-        
-    }
-
-    .acordion-item-title::after{
-        /*content:"002B"; */
-        content:"\25BE";
-        font-size: 1rem;
-        position: absolute;
-        right: 10px;
-        transition: transform 0.2s ease-in-out;
-    }
-    
-    .acordion-item-title.active::after{
-        /*content:"\2212" */
-        transform: rotate(180deg);
-    }
-
-    .accordion-item{
-        background-color: lightgray;
-        border-radius:10px; 
-        width:70%;
-        border: 1px solid darkgray;
-        height: 100%;
-        padding-bottom: 50px;
-        margin:20px auto;
-    }
-    
-    .top-heading{
-        font-size: 25px;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-}
-
-
-
-
-
-
-
-

@@ -176,7 +176,7 @@ const loginEmail = document.getElementById("loginEmail").value;
     .then(res => res.json())
     .then(data =>{
       if(data.token !== 'undefined') {
-       window.open("signup.html")
+       window.open("blog.html")
        localStorage.setItem("token", data.token);
        } 
     })

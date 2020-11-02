@@ -110,6 +110,40 @@ submitButton.addEventListener('click', (e)=>{
    .then(() => location.reload())
 })
 
-
-
 }) 
+
+//getting all queries
+const querySpace = document.getElementById("query-space");
+let result= `
+<table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Message</th>
+ </tr>
+</table>
+`;
+
+//getting all blogs
+
+const renderQueries = (postQueries)=>{
+    postQueries.forEach(query=>{
+        result += `       
+    <table style="width:100%">
+        <tr>
+          <td>${query.firstName}</td>
+          <td>${query.lastName}</td>
+          <td>${query.email}</td>
+          <td>${query.message}</td>
+        </tr>
+     </table>
+        `;
+    })
+
+    querySpace.innerHTML = result;
+}
+
+fetch("https://desolate-ridge-00597.herokuapp.com/api/queries")
+.then(res=>res.json())
+.then((data)=>renderQueries(data));

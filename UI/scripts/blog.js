@@ -44,7 +44,3 @@ fetch(url)
    menu.innerHTML = menuContent
 })
 
-const pressedTitle = document.getElementById("title");
-pressedTitle.addEventListener("click", (e)=>{
-    console.log("it workss")
-})

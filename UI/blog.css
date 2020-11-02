@@ -83,3 +83,13 @@ textarea{
     margin-top: 50px 50px;
 }
 
+button{
+    width:80px;
+    height: 40px;
+    font-size: 15px;
+}
+
+hr{
+margin-bottom: 10px;
+}
+

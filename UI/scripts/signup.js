@@ -56,6 +56,8 @@ loginModal.addEventListener("click", event=>{
 // signup form validation
 
 const form = document.getElementById("register-form");
+/*
+const validPassword = document.getElementById("paswd")
 const errorMessage = document.getElementById("error");
 errorMessage.style.color= "red";
 errorMessage.style.backgroundColor = "lightblue";
@@ -63,12 +65,12 @@ errorMessage.style.padding ="10px 20px"
 errorMessage.style.textAlign ="center";
 errorMessage.style.display ="none";
 
-/*form.addEventListener("submit", (e)=>{
+form.addEventListener("submit", (e)=>{
 e.preventDefault();
 
 let messages = [];
 
-if(password.value.length <=7 || password.value.length>=15){
+if(validPassword.value.length <=7 || validPassword.value.length>=15){
 messages.push("Password must be between 8 and 15 characters");
 }
 
@@ -88,8 +90,8 @@ form.reset();
 const signupModal = document.querySelector(".signup-mod-container");
 
 });
-
 */
+
 //console.log(myName + '' + email + '' + password + '' + phone)
 
 const url="https://desolate-ridge-00597.herokuapp.com/api/register";
@@ -116,6 +118,7 @@ const phone = document.getElementById("phone").value;
     .then(res => res.json())
     .then(data =>{
        alert(data.message);
+       window.open("blog.html")
     })
 
     form.reset();
@@ -126,7 +129,7 @@ const phone = document.getElementById("phone").value;
    
 
 //login form validation
-
+/*
 const loging = document.getElementById("loging");
 const loginPassword = document.getElementById("login-paswd");
 const loginError = document.getElementById("login-error");
@@ -154,7 +157,7 @@ setTimeout(function(){
 
 loging.reset();
 });
-
+*/
 // login section
 
 loginForm = document.getElementById("loging");

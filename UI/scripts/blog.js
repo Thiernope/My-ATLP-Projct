@@ -22,20 +22,22 @@ fetch(url)
   <label for="name">Name</label><br><br>
   <input type="text"><br><br>
   <label for="message">Comment</label><br><br>
-  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+  <button type="submit" id="comment-form">send</button>
 </form>
 </div>
 
 <div class="gotten-commnts">
   <h4>Thierry Ntirandekura</h4>
   <p>Hello bro, you wrote something interesting!!</p>
+  <hr>
   </div>
        </li>
      `;
 
  menuContent +=`
  
- <li>${blog.title}</li>
+ <li class="menu-titles">${blog.title}</li>
  
  `;
    })

@@ -9,15 +9,18 @@
 </head>
 <body>
    <div class="container">
-       <h1 class="header">Login Form</h1>
+       <h1 class="header">Login As Admin</h1>
        <div class="input-field">
           <div id="error"></div>
-           <form id="form" action="/" method ="GET">
-               <input type="email" id="email" name="email">
-               <label for=""> Email</label>
+           <form id="form" action="/">
+               <input type="email" id="email" name="email" placeholder="Email">
        <div class="input-field">
-            <input type="password" id="pasd" name="pasd" class = "input-password"> <span class="show-password"><i class="far fa-eye"></i></span>
-            <label for=""> Password</label>
+            <input type="password" id="pasd" name="pasd" class = "input-password" placeholder="Password"> <span class="show-password"><i class="far fa-eye"></i></span>
+        
+       <div class="button">
+
+        <div class="input-field">
+            <input type="text" id="username" name="pasd" class = "input-password" placeholder="Username"> <span class="show-password"><i class="far fa-eye"></i></span>
        <div class="button">
         
                 <div class="inner">
@@ -36,6 +39,6 @@
    <p class="signup">Don't you have account? <a href="signup.html">Sign Up</a></p>
     </div>
 
-    <script defer src="login.js"></script>
+    <script defer src='scripts/login.js'></script>
 </body>
 </html>

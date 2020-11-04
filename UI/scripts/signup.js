@@ -183,8 +183,7 @@ const loginUsername = document.getElementById('loginUsername').value;
     .then(res => res.json())
     .then(data =>{
       if(data.success === true) {
-       //window.open("blog.html")
-       console.log(data);
+       window.open("blog.html")
        } else{
            alert(data.message);
        }

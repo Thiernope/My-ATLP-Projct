@@ -94,7 +94,7 @@ const signupModal = document.querySelector(".signup-mod-container");
 
 //console.log(myName + '' + email + '' + password + '' + phone)
 
-const url="https://desolate-ridge-00597.herokuapp.com/api/register";
+const url="https://desolate-ridge-00597.herokuapp.com/api/register-user";
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
 
@@ -102,6 +102,7 @@ const password = document.getElementById("paswd").value;
 const myName = document.getElementById("name").value;
 const email = document.getElementById("email").value;
 const phone = document.getElementById("phone").value;
+const username = document.getElementById('username').value;
     fetch(url,{
         method: "POST",
         headers: {
@@ -112,7 +113,8 @@ const phone = document.getElementById("phone").value;
         name: myName,
         email: email,
         password: password,
-        phone: phone
+        phone: phone,
+        username: username
         })
     })
     .then(res => res.json())
@@ -165,23 +167,27 @@ loginForm.addEventListener('submit',(e)=>{
     e.preventDefault();
 const loginPassword= document.getElementById("loginPassword").value;
 const loginEmail = document.getElementById("loginEmail").value;
-    fetch("https://desolate-ridge-00597.herokuapp.com/api/login",{
+const loginUsername = document.getElementById('loginUsername').value;
+    fetch("https://desolate-ridge-00597.herokuapp.com/api/login-user",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             'Accept': 'application/json,text/plain,*/*'
         },
         body: JSON.stringify({
-        username: loginEmail,
-        password: loginPassword
+        email: loginEmail,
+        password: loginPassword,
+        username: loginUsername
         })
     })
     .then(res => res.json())
     .then(data =>{
-      if(data.token !== 'undefined') {
-       window.open("blog.html")
-       localStorage.setItem("token", data.token);
-       } 
+      if(data.success === true) {
+       //window.open("blog.html")
+       console.log(data);
+       } else{
+           alert(data.message);
+       }
     })
     
     loginForm.reset();

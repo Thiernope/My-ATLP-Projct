@@ -54,6 +54,18 @@ form{
   padding: 10px 20px 20px 20px;
 }
 
+.cards-container, #query-space{
+  width: 90%;
+  margin: 20px auto;
+}
+
+span{
+  color: rgb(25, 94, 134);
+}
+
+th>span{
+  color: rgb(221, 17, 17);
+}
 .links{
   display: flex;
   justify-content: space-around;

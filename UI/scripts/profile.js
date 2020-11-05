@@ -52,6 +52,7 @@ window.addEventListener('load',(e)=>{
      infoContainer.innerHTML = output;  
        
     })
+    
 })
 
 

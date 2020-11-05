@@ -90,10 +90,15 @@ span{
     background-color: rgb(182, 235, 182);
 }
 
-
 ul li{
-    padding: 20px 30px;
     list-style:none;
+    padding: 20px 30px;
+    font-size: 20px;
+    color: white;
+}
+
+ul div{
+    padding: 20px 30px;
     font-size: 20px;
     color: white;
 }

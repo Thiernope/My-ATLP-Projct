@@ -38,13 +38,15 @@ window.addEventListener('load',(e)=>{
     })
     .then(res => res.json())
     .then(data =>{
-        console.log(data);
+      console.log(data);
        data.forEach(item =>{
        output += `
-       <li>Name: <span>${item.name}</span></li>
-       <li>Username: <span>${item.username}</span></li>
-       <li>Email: <span>${item.email}</span></li>
-       <li>Phone: <span>${item.phone}</span></li>
+       <li>
+       <div>Name: <span>${item.name}</span></div>
+       <div>Username: <span>${item.username}</span></div>
+       <div>Email: <span>${item.email}</span></div>
+       <div>Phone: <span>${item.phone}</span></div>
+       </li>
        `;
 
        })

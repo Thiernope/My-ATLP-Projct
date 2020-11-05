@@ -1,5 +1,18 @@
 
-//add a query
+//add geolocation API
+const successCallback = (position)=>{
+    console.log(position)
+}
+
+const errorCallback = (error)=>{
+    console.error(error)
+}
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback,{
+    enableHighAccuracy: true,
+    timeout: 5000
+});
+
+
 const url = "https://desolate-ridge-00597.herokuapp.com/api/queries";
 const form = document.getElementById("query-form");
 form.addEventListener('submit',(e)=>{ 

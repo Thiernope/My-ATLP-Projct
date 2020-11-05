@@ -14,9 +14,9 @@ const renderPosts = (blogs)=>{
     blogs.forEach(post=>{
         output += `       
 <li class="card-post">
-    <h3 class="title-content">${post.title}</h3>
-    <h4 class="author-content">${post.author}</h4>
-    <h5>${post.date}</h5>
+    <h3 class="title-content"><span>${post.title}</span></h3>
+    <h4 class="author-content"><span>${post.author}</span></h4>
+    <h5><span>${post.date}</span></h5>
     <p class="content-content">${post.content}</p>
     <div class="links" data-id = ${post._id}>
    <a href="#" class="card-link" id="edit-blog">Edit</a>
@@ -117,10 +117,10 @@ const querySpace = document.getElementById("query-space");
 let result= `
 <table style="width:100%">
         <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Email</th>
-          <th>Message</th>
+          <th><span>Firstname</span></th>
+          <th><span>Lastname</span></th>
+          <th><span>Email</span></th>
+          <th><span>Message</span></th>
  </tr>
 </table>
 `;

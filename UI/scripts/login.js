@@ -47,8 +47,7 @@ const loginUsername = document.getElementById('username').value;
     .then(res => res.json())
     .then(data =>{
       if(data.success === true) {
-       //window.open("admin.html")
-        console.log(data);
+       window.open("admin.html")
         localStorage.setItem("token",data.token);
        } else{
            alert(data.message);
@@ -58,17 +57,6 @@ const loginUsername = document.getElementById('username').value;
     })
     
     form.reset();
-
-
-    /*
-     if(user.role !== role){
-return res.status(403).json({
-    message: `Please this portal is not yours`,
-    success: false 
-})
-  }
-
-    */
 })
 
 

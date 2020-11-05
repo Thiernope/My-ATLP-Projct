@@ -24,7 +24,7 @@ document.body.style.overflow = "initial";
 
 
 const url ="https://desolate-ridge-00597.herokuapp.com/api/users/profile";
-const infoContainer = document.querySelector(".info-container")
+const dataContainer = document.querySelector(".info-container")
 
 window.addEventListener('load',(e)=>{
     let output = "";
@@ -49,7 +49,7 @@ window.addEventListener('load',(e)=>{
 
        })
 
-     infoContainer.innerHTML = output;  
+     dataContainer.innerHTML = output;  
        
     })
     

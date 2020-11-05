@@ -39,23 +39,22 @@ window.addEventListener('load',(e)=>{
     .then(res => res.json())
     .then(data =>{
       console.log(data);
-       data.forEach(item =>{
        output += `
        <li>
-       <div>Name: <span>${item.name}</span></div>
-       <div>Username: <span>${item.username}</span></div>
-       <div>Email: <span>${item.email}</span></div>
-       <div>Phone: <span>${item.phone}</span></div>
+       <div>Name: <span>${data.name}</span></div>
+       <div>Username: <span>${data.username}</span></div>
+       <div>Email: <span>${data.email}</span></div>
+       <div>Phone: <span>${data.phone}</span></div>
        </li>
        `;
-
-       })
-
      dataContainer.innerHTML = output;  
        
     })
     
 })
+
+
+
 
 
 

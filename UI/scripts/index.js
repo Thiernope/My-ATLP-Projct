@@ -1,5 +1,16 @@
-<<<<<<< HEAD
-//add a query
+//add geolocation API
+const successCallback = (position)=>{
+    console.log(position)
+}
+
+const errorCallback = (error)=>{
+    console.error(error)
+}
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback,{
+    enableHighAccuracy: true,
+    timeout: 5000
+});
+
 const url = "https://desolate-ridge-00597.herokuapp.com/api/queries";
 const form = document.getElementById("query-form");
 form.addEventListener('submit',(e)=>{ 
@@ -28,19 +39,3 @@ form.addEventListener('submit',(e)=>{
 
     form.reset();
 })
-=======
-const createForm = document.querySelector("#create-form");
-createForm.addEventListener("submit", (e)=>{
-e.preventDefault();
-db.collection("queries").add({
- firstName: createForm["first-name"].value,
- lastName: createForm["last-name"].value,
- email: createForm["email"].value,
- message: createForm["message"].value
-}).then(()=>{
-
-});
-
-createForm.reset();
-});
->>>>>>> dfd761a151ab522417d4224072e46711a35bf83f

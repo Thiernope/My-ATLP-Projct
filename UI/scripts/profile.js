@@ -22,14 +22,13 @@ document.body.style.overflow = "initial";
     }
 });
 
-const url ="https://desolate-ridge-00597.herokuapp.com/api/users/profile";
 
+const url ="https://desolate-ridge-00597.herokuapp.com/api/users/profile";
+const infoContainer = document.querySelector(".info-container")
 
 window.addEventListener('load',(e)=>{
-
+    let output = "";
     const token = localStorage.getItem('token');
-    console.log(token);
-
     fetch(url,{
         method: "GET",
         headers: {
@@ -39,6 +38,21 @@ window.addEventListener('load',(e)=>{
     })
     .then(res => res.json())
     .then(data =>{
-       console.log(data);
+        console.log(data);
+       data.forEach(item =>{
+       output += `
+       <li>Name: <span>${item.name}</span></li>
+       <li>Username: <span>${item.username}</span></li>
+       <li>Email: <span>${item.email}</span></li>
+       <li>Phone: <span>${item.phone}</span></li>
+       `;
+
+       })
+
+     infoContainer.innerHTML = output;  
+       
     })
 })
+
+
+

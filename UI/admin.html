@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+<body>
+ 
+   <div class="blogs">
+   <h1>Manage Blogs</h1> 
+   <form action="" id="add-article-form">
+       <div class="form-group">
+     <label for="title">Title</label>
+     <input type="text" id="title" required>
+       </div>
+       <div class="form-group">
+     <label for="author">Author</label>
+    <input type="text" id="author" required> 
+     </div> 
+     <div class="form-group"> 
+     <label for="content">Content</label>
+     <textarea name="content" id="content"cols="30" rows="10"></textarea>
+    </div>
+
+    <button type="submit" class="btn">Add Article</button> 
+   </form>  
+<ul class="cards-container">
+    <!--WILL BE RETRIEVED BLOGS-->
+    
+</ul>
+ </div>
+
+ <h1>Received queries</h1>
+ 
+ <div id="query-space">
+  <table style="width:100%">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Message</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>ntirandth@gmail.com</td>
+      <td>hello guy, you arwe relly awasome</td>
+    </tr>
+    <tr>
+      <td>Eva</td>
+      <td>Jackson</td>
+      <td>eval@gmail.com</td>
+      <td>Hi, i want to work with you</td>
+    </tr>
+  </table>
+ </div>
+
+<script src="scripts/admin.js"></script>
+ </body>
+ </html>

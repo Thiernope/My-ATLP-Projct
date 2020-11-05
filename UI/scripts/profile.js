@@ -22,3 +22,23 @@ document.body.style.overflow = "initial";
     }
 });
 
+const url ="https://desolate-ridge-00597.herokuapp.com/api/users/profile";
+
+
+window.addEventListener('load',(e)=>{
+
+    const token = localStorage.getItem('token');
+    console.log(token);
+
+    fetch(url,{
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "authorization": `${token}`
+        }
+    })
+    .then(res => res.json())
+    .then(data =>{
+       console.log(data);
+    })
+})

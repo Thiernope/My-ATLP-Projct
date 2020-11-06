@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    
+</head>
+<body>
+    <div class="header">
+        <div class="log">
+            <img src="assets/Logo.PNG" alt="">
+        </div>
+    <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="blog.html"><li>Check Current blogs</li></a>
+       
+    </ul> 
+    <div class="bars">
+        <i class="fas fa-bars"></i>  
+    </div>
+</div>
+    <div class="container">
+    <div class="left-side">
+        <div><h1>You are great!!!</h1></div>
+        <div>
+            <img src="assets/My profile.PNG" alt="">
+        <h2>+</h2>
+        </div>
+        <div class="name">Thierry Ntirandekura</div>
+    </div>
+    <div class="right-side">
+       <h1>Registered Info</h1>
+        <ul class="info-container">
+            <li>
+            <div>Name: <span>Thierry Ntirandekura</span></div>
+            <div>Username: <span>Thiernope</span></div>
+            <div>Email: <span>ntirandth@gmail.com</span></div>
+            <div>Phone: <span>0789378373</span></div>
+        </li>
+        </ul>
+        <div>
+        <button class="update">Update</button>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Update</h3>
+            <form action="" id="update-form">
+            <input type="text" placeholder="Name" id="name">
+            <input type="text" placeholder="Username" id="username">
+            <input type="text" placeholder="Email" id="email">
+            <input type="text" placeholder="Phone" id="phone">
+            <button type="submit">Update</button>
+        </form>
+        </div>
+    </div>
+
+    <script src="scripts/profile.js"></script>
+</body>
+</html>

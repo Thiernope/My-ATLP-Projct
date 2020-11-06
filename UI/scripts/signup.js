@@ -121,6 +121,7 @@ const username = document.getElementById('username').value;
     .then(data =>{
        alert(data.message);
        window.location = "../UI/signup.html";
+
     })
 
     form.reset();
@@ -184,6 +185,8 @@ const loginUsername = document.getElementById('loginUsername').value;
     .then(data =>{
       if(data.success === true) {
        window.location = "../UI/blog.html";
+       localStorage.setItem("token",data.token);
+
        } else{
            alert(data.message);
        }

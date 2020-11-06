@@ -1,0 +1,95 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.side-bar-menu{
+    background-color: lightblue;
+    height: 100vh;
+    position: sticky;
+    top:0px;
+    overflow: scroll;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+.title-content{
+    margin: 50px 100px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.blog-content{
+    margin: 50px 100px;
+    text-align: justify;
+    font-size: 18px;
+    
+}
+
+.author-content, .date-content{
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+span{
+    color: red;
+}
+
+.menu{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+li{
+    list-style: decimal;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+h1,h2{
+    margin-left: 15px;
+}
+h1{
+    color: rgb(43, 43, 173);
+}
+
+.blog-list > li{
+    list-style: none;
+}
+
+.comments{
+    text-align: center;
+}
+
+input{
+    width: 400px;
+    height:40px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+textarea{
+    width:400px;
+    height: 100px;
+}
+
+.gotten-commnts{
+    margin-top: 50px 50px;
+}
+
+button{
+    width:80px;
+    height: 40px;
+    font-size: 15px;
+}
+
+hr{
+margin-bottom: 10px;
+}
+

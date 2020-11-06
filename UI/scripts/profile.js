@@ -52,9 +52,3 @@ window.addEventListener('load',(e)=>{
     })
     
 })
-
-
-
-
-
-

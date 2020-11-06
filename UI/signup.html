@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register or Login</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+   <h1>Welcome Again</h1>
+
+    <div class="heading">
+       <div>
+         <h2>If you don't have account</h2>
+         <h3 id="signup">Signup</h3>
+       </div>
+       <div>
+         <h2>If you already have acount</h2>
+         <h3 id="login-form">Login</h3> 
+       </div>
+       <div>
+        <h2>If you are Admin</h2>
+        <h3 id="login-form"><a href="login.html">Login</a></h3> 
+      </div>
+    </div>
+ 
+ 
+<!--signup modal-->
+<div class="signup-mod-container">
+ <div class="signup-modal">
+     <span class="signupClose">&times;</span>
+    <h1 class="form-header">Register</h1>
+    <div id="error"></div>
+  <div class="alert">Thank you for registering!</div>
+    <div class="input-field">
+     <form  id ="register-form" action="/" method="GET">
+       <input type="text"  placeholder="Name" id="name" required>
+         <!--<label for=""> Name</label>-->
+ </div>
+
+ <div class="input-field">
+    
+  <input type="text"  placeholder ="username" id="username" required>
+        <!--<label for=""> Company</label> -->
+</div>
+    <div class="input-field">
+            <input type="email" placeholder="Email" id ="email"required>
+            <!--<label for=""> Email</label> -->
+    </div>
+    <div class="input-field">
+         <input type="password" id ="paswd" placeholder="Password" class = "input-password" required> <span class="show-password"><i class="far fa-eye"></i></span>
+         <!--<label for=""> Password</label>-->
+    <div class="button">
+
+      <div class="input-field">
+    
+        <input type="number"  placeholder ="phone" id="phone" required>
+              <!--<label for=""> Company</label> -->
+      </div>
+             <div class="inner">
+               <button type="submit">Submit</button>
+             </div>
+ </div>
+     </form>
+</div>
+</div>
+</div>
+</div>
+
+<!--login modal--> 
+<div class="login-modal-container">
+<div class="login-modal">
+    <span class="loginClose">&times;</span>
+    <h1 class="form-header">Login Form</h1>
+    <div class="input-field">
+       <div id="login-error"></div>
+        <form id="loging" action="/" method ="GET">
+            <input type="email" id="loginEmail" name="email" placeholder="Email" required>
+            <!--<label for=""> Email</label>-->
+    <div class="input-field">
+         <input type="password" id="loginPassword" placeholder="Password" name="pasd" class = "input-password"> <span class="show-password"><i class="far fa-eye"></i></span>
+         <!--<label for=""> Password</label>-->
+         </div> <div class="input-field">
+          <input type="text" id="loginUsername" placeholder="Username" name="pasd" class = "input-password"> <span class="show-password"><i class="far fa-eye"></i></span>
+          <!--<label for=""> Password</label>-->
+          </div>
+
+  
+
+
+    <div class="button">
+     
+             <div class="inner">
+                <button type="submit">Login</button>
+             </div>
+    </div>
+     </form>
+
+<script src="scripts/signup.js"></script>
+</body>
+</html>
+
+

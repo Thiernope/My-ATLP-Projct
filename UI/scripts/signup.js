@@ -120,7 +120,7 @@ const username = document.getElementById('username').value;
     .then(res => res.json())
     .then(data =>{
        alert(data.message);
-       window.open("blog.html")
+       window.location = "../UI/signup.html";
     })
 
     form.reset();
@@ -183,7 +183,7 @@ const loginUsername = document.getElementById('loginUsername').value;
     .then(res => res.json())
     .then(data =>{
       if(data.success === true) {
-       window.open("blog.html")
+       window.location = "../UI/blog.html";
        } else{
            alert(data.message);
        }
